@@ -1,0 +1,129 @@
+@media (max-width:400px) {
+    main {
+        height: 100vh;
+        background-color: #efefef;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        min-height: 200px;
+        border-radius: 10px;
+        box-shadow: 10px 0 25px -25px rgba(0, 0, 0, 0.2);
+
+        .img-drawers {
+            width: 100%;
+            min-height: 200px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container-article {
+            overflow: hidden;
+            border-radius: 0 0 10px 10px;
+            background-color: #fff;
+            padding: 0;
+
+            .article {
+                padding: 30px 30px 0 30px;
+                margin-bottom: 20px;
+
+                .title-about-drawers {
+                    font-size: 16px;
+                }
+
+                .paragraph {
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .infor-profile {
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s ease;
+
+            .picture {
+                display: flex;
+                align-content: center;
+
+            }
+        }
+    }
+
+    .infor-profile .btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .share-icons {
+            display: none;
+            border-radius: 10px;
+            /* padding: 10px 0 0; */
+            opacity: 0;
+        }
+
+        .btn-share {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: hsl(210, 46%, 95%);
+        }
+
+        .btn-share:hover {
+
+            background-color: hsl(214, 17%, 51%);
+
+            .btn-img {
+                filter: brightness(100);
+            }
+        }
+
+    }
+
+    .infor-profile.active {
+        background-color: hsl(217, 19%, 35%);
+        transition: 0.2s ease;
+
+        .picture {
+            display: none;
+        }
+
+        .btn {
+            width: 100%;
+
+            .share-icons {
+                display: flex;
+                align-items: center;
+                position: static;
+                opacity: 1;
+                background-color: transparent;
+                border-radius: none;
+                padding: 0;
+                position: static;
+                transition: 0.3s ease;
+                opacity: 1;
+            }
+
+            .btn-share.active {
+                background-color: hsl(214, 17%, 51%);
+
+                .btn-img {
+                    filter: brightness(100);
+                }
+            }
+        }
+    }
+}
